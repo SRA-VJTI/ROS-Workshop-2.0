@@ -17,20 +17,20 @@
 
 3. Check dependencies
 
-* `rospack depends1 SRA`
+* `rospack depends SRA`
 
 * `roscd SRA`
 
 * `cat package.xml`
 
-4. Copy the *package.xml*, *CMakelists.txt*, *msg* & *script* from the ROS_python folder and paste it to *`~/catkin_ws/src/SRA`*
+4. Copy the ***package.xml***, ***CMakelists.txt***, ***msg*** & ***script*** from the ROS_python folder and paste it to *~/catkin_ws/src/SRA*
 
 5. Enter the *`catkin_make`* command from the catkin_ws directory
 
-6. Navigate to *`~/catkin_ws/src/SRA/scripts`* and enter the command, for each of the files
+6. Navigate to *~/catkin_ws/src/SRA/scripts* and enter the command, for each of the files
 
 * `sudo chmod +x file_name.py`
 
-7. Copy the ***ROS_SRA19*** from the ESP-IDF folder to the *`~/esp/esp-idf/components' folder`*
+7. Copy the **ROS_SRA19** from the ESP-IDF folder to the *~/esp/esp-idf/components* folder
 
-8. Copy all the codes to the *`~/esp/esp-idf/`* folder
+8. Copy all the codes to the *~/esp/esp-idf/* folder
