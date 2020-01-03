@@ -1,36 +1,36 @@
-# ROS_Workshop-2.0
-Offficial Repository for the ROS-based Manipulator Workshop
+## ROS_Workshop - 2.0
+#### Offficial Repository for the ROS-based Manipulator Workshop
 
-I) Create ROS package named 'SRA'
+1. Create ROS package named **SRA**
 
-cd ~/catkin_ws/src 
+`cd ~/catkin_ws/src`
 
-catkin_create_pkg SRA std_msgs rospy roscpp
+`catkin_create_pkg SRA std_msgs rospy roscpp`
 
-II) Build catkin workspace and source the setup file:
+2. Build catkin workspace and source the setup file
 
-cd ~/catkin_ws
+`cd ~/catkin_ws`
 
-catkin_make
+`catkin_make`
 
-. ~/catkin_ws/devel/setup.bash
+`. ~/catkin_ws/devel/setup.bash`
 
-III) Check dependencies
+3. Check dependencies
 
-rospack depends1 SRA
+`rospack depends1 SRA`
 
-roscd SRA
+`roscd SRA`
 
-cat package.xml
+`cat package.xml`
 
-IV) Copy the 'package.xml', 'CMakelists.txt', 'msg' & 'script' from the ROS_python folder and paste it to '~/catkin_ws/src/SRA'
+4. Copy the *package.xml*, *CMakelists.txt*, *msg* & *script* from the ROS_python folder and paste it to *`~/catkin_ws/src/SRA`*
 
-V) Enter the 'catkin make' command from the catkin_ws directory
+5. Enter the *`catkin_make`* command from the catkin_ws directory
 
-VI) Navigate to '~/catkin_ws/src/SRA/scripts' and enter the command, for each of the files:
+6. Navigate to *`~/catkin_ws/src/SRA/scripts`* and enter the command, for each of the files:
 
-sudo chmod +x file_name.py
+`sudo chmod +x file_name.py`
 
-VII) Copy the ROS_SRA19 from the ESP-IDF folder to the '~/esp/esp-idf/components' folder
+7. Copy the ***ROS_SRA19*** from the ESP-IDF folder to the *`~/esp/esp-idf/components' folder`*
 
-VIII) Copy all the codes to the '~/esp/esp-idf/' folder.
+8. Copy all the codes to the *`~/esp/esp-idf/`* folder
