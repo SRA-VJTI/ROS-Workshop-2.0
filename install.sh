@@ -1,5 +1,5 @@
 cd ~
-git clone https://github.com/laukik-hase/ROS-Workshop-2.0
+git clone https://github.com/SRA-VJTI/ROS-Workshop-2.0
 
 cd ~/catkin_ws/src
 catkin_create_pkg sra std_msgs rospy roscpp
