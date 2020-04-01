@@ -2,7 +2,7 @@
 
 import rospy
 
-from SRA.msg import custom_array ##custom message
+from sra.msg import custom_array ##custom message
 import sys
 
 

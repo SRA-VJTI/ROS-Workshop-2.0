@@ -1,36 +1,29 @@
-## ROS_Workshop - 2.0
-#### Offficial Repository for the ROS-based Manipulator Workshop
+# ROS-Workshop-2.0
 
-1. Create ROS package named **SRA**
+*Official Repository for ROS-based Manipulator, implemented with ESP32*
 
-* `cd ~/catkin_ws/src`
+__Prerequisites__: **ROS, initialiased with a catkin_ws workspace; ESP-IDF**
 
-* `catkin_create_pkg SRA std_msgs rospy roscpp`
+Run the following command for a quick install:
 
-2. Build catkin workspace and source the setup file
+```bash
+./install.sh
+```
+## Steps:
 
-* `cd ~/catkin_ws`
+1) Flash the code 'Server_with_Servo_Control' onto your ESP32; wait till it connects to the server
+```bash
+cd ~/esp/esp-idf/codes/Server_with_Servo_Control
+make -j8 flash monitor
+```
+2) Start the ROS Core service i.e. the ROS Master by the `roscore` command.
 
-* `catkin_make`
-
-* `. ~/catkin_ws/devel/setup.bash`
-
-3. Check dependencies
-
-* `rospack depends SRA`
-
-* `roscd SRA`
-
-* `cat package.xml`
-
-4. Copy the ***package.xml***, ***CMakelists.txt***, ***msg*** & ***script*** from the ROS_python folder and paste it to *~/catkin_ws/src/SRA*
-
-5. Enter the *`catkin_make`* command from the catkin_ws directory
-
-6. Navigate to *~/catkin_ws/src/SRA/scripts* and enter the command, for each of the files
-
-* `sudo chmod +x file_name.py`
-
-7. Copy the **ROS_SRA19** from the ESP-IDF folder to the *~/esp/esp-idf/components* folder
-
-8. Copy all the codes to the *~/esp/esp-idf/* folder
+3) Start the ROS Publisher by executing the relevant python script: (e.g. angle -> coordinates)
+```bash
+rosrun sra Publisher_ForwardKinematics.py
+```
+4) Start the ROS Subscriber by executing the relevant python script, which would then connect to the ESP32 via the server
+```bash
+rosrun sra SubscriberSocketTCP.py
+```
+5) Enter the angles on the publisher side and voila! See your manipulator moving!

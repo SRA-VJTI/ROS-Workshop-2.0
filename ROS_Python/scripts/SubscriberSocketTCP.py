@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
-from SRA.msg import custom_array
+from sra.msg import custom_array
 from builtins import input
 import socket
 import sys
